@@ -8,7 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic_01_Check_Environment {
+public class Topic_00_Template {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 	String osName = System.getProperty("os.name");
@@ -28,7 +28,7 @@ public class Topic_01_Check_Environment {
 
 	@Test
 	public void TC_01_() {
-	
+		
 	}
 
 	@Test
