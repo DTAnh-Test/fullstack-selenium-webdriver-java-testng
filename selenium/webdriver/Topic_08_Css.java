@@ -50,8 +50,8 @@ public class Topic_08_Css {
 			// Dấu . đại diện cho class
 		driver.findElement(By.xpath("//span[@class='count']"));
 		driver.findElement(By.cssSelector("span[class='count']"));
-		driver.findElement(By.cssSelector("span.'count'"));
-		driver.findElement(By.cssSelector(".count'"));
+		driver.findElement(By.cssSelector("span.count"));
+		driver.findElement(By.cssSelector(".count"));
 			// Dấu . đại diện cho nối 1 chuỗi value trong Css
 		driver.findElement(By.cssSelector("div[class='col-1 new-users']"));
 		driver.findElement(By.cssSelector("div.new-users"));
