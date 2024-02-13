@@ -78,7 +78,7 @@ public class Topic_11_Web_Browser_Command {
 				 driver.manage().timeouts().setScriptTimeout(15, TimeUnit.HOURS);
 			
 				 // Window
-				  driver.manage().widrindow().fullscreen();
+				  driver.manage().window().fullscreen();
 				  driver.manage().window().maximize();
 				 // Lấy vị trí ra
 				  Point point = driver.manage().window().getPosition();
