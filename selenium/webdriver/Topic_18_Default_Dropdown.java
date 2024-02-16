@@ -43,7 +43,7 @@ public class Topic_18_Default_Dropdown {
 	}
 
 	@Test
-	public void TC_01_() {
+	public void TC_01_Nopcommerce() {
 		driver.get("https://demo.nopcommerce.com/register");
 		
 		driver.findElement(By.xpath("//a[text()='Register']")).click();
