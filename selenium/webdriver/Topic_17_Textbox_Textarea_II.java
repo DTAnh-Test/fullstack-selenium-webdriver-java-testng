@@ -103,6 +103,8 @@ public class Topic_17_Textbox_Textarea_II {
 				.sendKeys(issueDate);
 		driver.findElement(By.xpath("//label[text()='Expiry Date']/parent::div/following-sibling::div//input"))
 				.sendKeys(expiryDate);
+		driver.findElement(By.xpath("//label[text()='Comments']/parent::div/following-sibling::div/textarea"))
+		.sendKeys(comment);
 		driver.findElement(By.cssSelector("button[type='submit']")).click();
 		sleepInSecond(3);
 
