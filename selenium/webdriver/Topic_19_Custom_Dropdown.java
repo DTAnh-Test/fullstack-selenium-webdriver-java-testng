@@ -56,40 +56,40 @@ public class Topic_19_Custom_Dropdown {
 		// Hành vi:
 		driver.get("http://jqueryui.com/resources/demos/selectmenu/default.html");
 //			// 1. Click vào 1 thẻ để xổ hết các item
-		driver.findElement(By.cssSelector("span#number-button")).click();
+//		driver.findElement(By.cssSelector("span#number-button")).click();
 //		
 //			// Chờ cho tất cả items được load ra hết (trong vòng 30s)
-		explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("ul#number-menu>li>div")));
-//				// Lấy tất cả items trong dropdown lưu vào trong list
-		List<WebElement> allItems = driver.findElements(By.cssSelector("ul#number-menu>li>div"));
+//		explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("ul#number-menu>li>div")));
+//				// Lấy tất cả items trong fropdown lưu vào trong list
+//		List<WebElement> allItems = driver.findElements(By.cssSelector("ul#number-menu>li>div"));
 		
 //				// For index
 //					// Duyệt qua từng item
 //		for (int i = 0; i < allItems.size(); i++) {
-////					// Get Text của từng item
+//					// Get Text của từng item
 //			String itemText = allItems.get(i).getText();
-////					// Kiểm tra text đúng với cái cần chọn
+//					// Kiểm tra text đúng với cái cần chọn
 //			if (itemText.equals("5")) {
-////					// Click
+//					// Click
 //				allItems.get(i).click();
-////					// Thoát vòng lặp
+//					// Thoát vòng lặp
 //				break;
 //			}
 //		}
 //		
 				// Foreach
 					// Duyệt qua từng item
-		for (WebElement tempElement : allItems) {
+//		for (WebElement tempElement : allItems) {
 //					// Get Text từng item
-			String itemTexxt = tempElement.getText();
+//			String itemTexxt = tempElement.getText();
 //					// Kiểm tra text đúng với cái cần chọn
-			if (itemTexxt.equals("10")) {
+//			if (itemTexxt.equals("10")) {
 //					// Click
-				tempElement.click();
+//				tempElement.click();
 //					// Thoát vòng lặp
-				break;
-			}
-		}
+//				break;
+//			}
+//		}
 				// Get text của từng item
 				 // Kiểm tra text đúng với cái cần chọn
 				// Click
@@ -128,15 +128,20 @@ public class Topic_19_Custom_Dropdown {
 	}
 
 //	@Test
-	public void TC_02_Editable() {
+	public void TC_02_Edittable() {
 		driver.get("https://react.semantic-ui.com/maximize/dropdown-example-selection/");
-		editItemInCustomDropdown("//input[@class='search']", "//div[@role='option']/span", "Belgium");
+		selectItemInCustomDropdown("//input[@class='search']", "//div[@role='option']/span", "Belgium");
 		Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "Belgium");
 		
-		editItemInCustomDropdown("//input[@class='search']", "//div[@role='option']/span", "America Samoa");
+		selectItemInCustomDropdown("//input[@class='search']", "//div[@role='option']/span", "America Samoa");
 		Assert.assertEquals(driver.findElement(By.cssSelector("div.divider.text")).getText(), "America Samoa");
 	}
 
+	@Test
+	public void TC_03_NopCommerce() {
+
+	}
+	
 	public void editItemInCustomDropdown(String xpathTextbox, String xpathChild, String expectedText) {
 		// 1. Click vào 1 thẻ để xổ hết các item
 				driver.findElement(By.xpath(xpathTextbox)).clear();
