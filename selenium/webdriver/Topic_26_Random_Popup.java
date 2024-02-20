@@ -35,7 +35,7 @@ public class Topic_26_Random_Popup {
 		email = "test" + rand.nextInt(999) + "@gmail.com";
 	}
 
-//	@Test
+	@Test
 	public void TC_01_Java_Code_Geeks_Not_In_HTML() {
 		// 3 trường hợp:
 		// Mới mở page: Có. không có trong HTML
@@ -81,7 +81,7 @@ public class Topic_26_Random_Popup {
 
 	}
 
-//	@Test
+	@Test
 	public void TC_02_VNK_In_HTML() {
 		driver.get("https://vnk.edu.vn/");
 		sleepInSecond(30);
