@@ -18,7 +18,7 @@ public class Topic_21_Checkbox_Radio {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 	String osName = System.getProperty("os.name");
-	JavascriptExecutor jssExcutor;
+	JavascriptExecutor jsExcutor;
 
 	@BeforeClass
 	public void beforeClass() {
@@ -29,7 +29,7 @@ public class Topic_21_Checkbox_Radio {
 		}
 
 		driver = new EdgeDriver();
-		jssExcutor = (JavascriptExecutor) driver;
+		jsExcutor = (JavascriptExecutor) driver;
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
@@ -41,7 +41,7 @@ public class Topic_21_Checkbox_Radio {
 		By dualZoneCheckbox = By.xpath("//label[text()='Luggage compartment cover']/preceding-sibling::input");
 		// Click checkbox
 		if (!driver.findElement(dualZoneCheckbox).isSelected()) {
-			jssExcutor.executeScript("arguments[0].scrollIntoView(true);",
+			jsExcutor.executeScript("arguments[0].scrollIntoView(true);",
 					driver.findElement(By.cssSelector("h1.kd-title")));
 			sleepInSecond(1);
 			driver.findElement(dualZoneCheckbox).click();
@@ -51,7 +51,7 @@ public class Topic_21_Checkbox_Radio {
 		Assert.assertTrue(driver.findElement(dualZoneCheckbox).isSelected());
 		// Bỏ chọn checkbox
 		if (driver.findElement(dualZoneCheckbox).isSelected()) {
-			jssExcutor.executeScript("arguments[0].scrollIntoView(true);",
+			jsExcutor.executeScript("arguments[0].scrollIntoView(true);",
 					driver.findElement(By.cssSelector("h1.kd-title")));
 			sleepInSecond(1);
 			driver.findElement(dualZoneCheckbox).click();
@@ -70,7 +70,7 @@ public class Topic_21_Checkbox_Radio {
 
 		// Click radio
 		if (!driver.findElement(petrolTwoDot).isSelected()) {
-			jssExcutor.executeScript("arguments[0].scrollIntoView(true);",
+			jsExcutor.executeScript("arguments[0].scrollIntoView(true);",
 					driver.findElement(By.cssSelector("h1.kd-title")));
 			sleepInSecond(1);
 			driver.findElement(petrolTwoDot).click();
@@ -80,7 +80,7 @@ public class Topic_21_Checkbox_Radio {
 		Assert.assertTrue(driver.findElement(petrolTwoDot).isSelected());
 		// Bỏ chọn radio
 		if (driver.findElement(petrolTwoDot).isSelected()) {
-			jssExcutor.executeScript("arguments[0].scrollIntoView(true);",
+			jsExcutor.executeScript("arguments[0].scrollIntoView(true);",
 					driver.findElement(By.cssSelector("h1.kd-title")));
 			sleepInSecond(1);
 			driver.findElement(dieselTwoDot).click();
@@ -173,7 +173,7 @@ public class Topic_21_Checkbox_Radio {
 
 		// Case 4: Vẫn dùng input để click và verify -> dùng JS Click
 		// JS không quan tâm element có bị che khônng
-		jssExcutor.executeScript("arguments[0].click();", driver.findElement(registerRadioVerify));
+		jsExcutor.executeScript("arguments[0].click();", driver.findElement(registerRadioVerify));
 		sleepInSecond(2);
 		Assert.assertTrue(driver.findElement(registerRadioVerify).isSelected()); 
 			// => Không lạm dụng JS để click vì
