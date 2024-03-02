@@ -74,11 +74,6 @@ public class Topic_32_Wait_FindElement {
 		System.out.println("Nhiều element: " + elements.size());
 	}
 
-	@Test
-	public void TC_03_() {
-		
-	}
-
 	public void sleepInSecond(long timeout) {
 		try {
 			Thread.sleep(timeout*1000);
