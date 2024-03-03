@@ -106,15 +106,15 @@ public class Topic_36_Wait_Explicit_Exercise {
 	public void TC_05_Upload(){
 		driver.get("https://gofile.io/welcome");
 		// Wait cho icon loading bien mat
-		Assert.assertTrue(explicitWait.until(ExpectedConditions.invisibilityOfAllElements(driver.findElements(By.id("spinner-border")))));
+		Assert.assertTrue(explicitWait.until(ExpectedConditions.invisibilityOfAllElements(driver.findElements(By.className("spinner-border")))));
 		// Click Upload files button
 		explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Upload Files']"))).click();
 		// Wait cho icon loading bien mat
 		Assert.assertTrue(explicitWait.until(ExpectedConditions.invisibilityOfAllElements(driver.findElements(By.id("spinner-border")))));
 		System.out.println("End wait icon hide: " + getDateTimeNow());
 		// Upload 3 files
-//		driver.findElement(By.cssSelector("input#filesUploadInput")).sendKeys(seaPath + "\n" + mountainPath + "\n" + waterPath);
-		explicitWait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("input#filesUploadInput"))).sendKeys(seaPath + "\n" + mountainPath + "\n" + waterPath);
+		driver.findElement(By.cssSelector("input#filesUploadInput")).sendKeys(seaPath + "\n" + mountainPath + "\n" + waterPath);
+//		explicitWait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("input#filesUploadInput"))).sendKeys(seaPath + "\n" + mountainPath + "\n" + waterPath);
 		System.out.println("End wait upload: " + getDateTimeNow());
 		// Wait cho tat ca upload loading bien mat
 		explicitWait.until(ExpectedConditions.invisibilityOfAllElements(driver.findElements(By.cssSelector("div.progress-bar"))));
