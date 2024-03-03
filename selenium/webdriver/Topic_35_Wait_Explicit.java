@@ -51,7 +51,7 @@ public class Topic_35_Wait_Explicit {
 		explicitWait.until(ExpectedConditions.attributeToBe(
 				By.id("login_username"),"placeholder","Nhap SDT hoac email"));//*
 
-		// Dung de cho cho 1 element cos the duoc click hay khong: button, checkbox, radio, link, image
+		// Dung de cho cho 1 element co the duoc click hay khong: button, checkbox, radio, link, image
 			// Dung truoc ham click()
 		explicitWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".fhs-btn-login")));//**
 

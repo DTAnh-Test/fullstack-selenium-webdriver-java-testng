@@ -34,7 +34,7 @@ public class Topic_32_Wait_FindElement {
 	public void TC_01_FindElement() {
 		driver.get("https://web.facebook.com/?_rdc=1&_rdr");
 		System.out.println("Start time: " + getDateTimeNow());
-		// 2 hàm findElement/ findElements bị aảnh hưởng thời gian cua implicitWait
+		// 2 hàm findElement/ findElements bị ảnh hưởng thời gian cua implicitWait
 		// findElement: Tìm 1 element
 		// findElements" Tìm nhiều element
 		// Bản chất findElement/ findElements: Tìm element trước khi thao tác lên nó
@@ -46,7 +46,7 @@ public class Topic_32_Wait_FindElement {
 			// 2. Không tìm thấy element nào
 				// Nó có cơ chế tìm lại, mỗi 0.5s tìm lại 1 lần
 				// TÌm lại mà thấy element thì trả về element đó => Không tìm tiếp nữa
-				// Tìm lại vẫn không thấy và hết timoue => Sẽ đánh fail testcase tại step đó và trả về thow: NoSuchElementException
+				// Tìm lại vẫn không thấy và hết timeout => Sẽ đánh fail testcase tại step đó và trả về thow: NoSuchElementException
 		driver.findElement(By.name("reg_email_confirmation__"));
 			// 3. Tìm thấy nhiều hơn 1 element
 				// Lấy ra element đầu tiên nếu như có nhiều hơn 1 element
@@ -65,7 +65,7 @@ public class Topic_32_Wait_FindElement {
 		// 2. Không tìm thấy element nào
 			// Nó có cơ chế tìm lại, mỗi 0.5s tìm lại 1 lần
 			// TÌm lại mà thấy element thì trả về element đó => Không tìm tiếp nữa
-			// Tìm lại vẫn không thấy và hết timoue => Sẽ không đánh fail testcase, trả về 1 list rỗng
+			// Tìm lại vẫn không thấy và hết timeout => Sẽ không đánh fail testcase, trả về 1 list rỗng
 		elements = driver.findElements(By.name("reg_email_confirmation__"));
 		// 3. Tìm thấy nhiều hơn 1 element
 			// Nó không cần chờ hết thời gian implicit
