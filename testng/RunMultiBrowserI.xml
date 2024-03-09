@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="tests" name="Suite" thread-count="3">
+	<!-- thread-count: Số lượng luồng có thể chạy song song cùng lúc-->	
+	<!-- parallel: -->: 
+	<!-- Global-->
+	<parameter name ="url" value ="http://live.techpanda.org/"/>
+
+  <test name="Run On Firefox">
+  <!-- Local-->
+  <parameter name ="browser" value ="Firefox"/>
+    <classes>
+      <class name="parameter.MultipleBrowser"/>
+    </classes>
+  </test> 
+  
+    <test name="Run On Chrome">
+  <parameter name ="browser" value ="Chrome"/>
+    <classes>
+      <class name="parameter.MultipleBrowser"/>
+    </classes>
+  </test> 
+  
+      <test name="Run On Edge">
+  <parameter name ="browser" value ="Edge"/>
+    <classes>
+      <class name="parameter.MultipleBrowser"/>
+    </classes>
+  </test>
+  
+</suite>

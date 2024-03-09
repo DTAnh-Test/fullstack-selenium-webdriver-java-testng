@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Run all Suites">
+	<suite-files>
+		<suite-file path="RunParamOptionalI.xml"/>
+		<suite-file path="RunMultiBrowserI.xml"/>
+	</suite-files>
+</suite>

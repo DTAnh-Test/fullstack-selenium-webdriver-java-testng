@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="Selenium" name="Suite">
+  <test name="Run On Chrome">
+  	<groups>
+  		<run>
+  			<include name = "pay"/> <!-- Chi chạy group pay-->
+  			<exclude name = "pay"/> <!-- Chạy group không phải pay -->
+  		</run>
+  	</groups>
+    <classes>
+      <class name="groupTest.Payment"/>
+      <class name="groupTest.User"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

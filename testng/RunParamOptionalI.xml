@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="Selenium" name="Suite">
+	<parameter name ="url" value ="http://live.techpanda.org/"/>
+  <test name="Run On Firefox">
+    <classes>
+      <class name="parameter.ParamOptional"/>
+    </classes>
+  </test> 
+  
+</suite>
